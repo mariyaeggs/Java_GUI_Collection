@@ -1,0 +1,153 @@
+import javax.swing.*;
+import java.awt.*;
+
+/**
+ * Programming Assignment 5, Part 1: Reading and Displaying .gif Files
+ * School: CSU, Monterey Bay
+ * Course: CST 338 Software Design
+ * Professor: Jesse Cecil, MS
+ *
+ * Simply displays all cards available for use in a window for the user to see.
+ *
+ * @author Mariya Eggensperger
+ * @author Kenneth Vader
+ * @author Brittany Mazza
+ */
+public class Assignment5P1
+{
+   static final int NUM_CARD_IMAGES = 57; // 52 + 4 jokers + 1 back-of-card
+   static Icon[] icon = new ImageIcon[NUM_CARD_IMAGES];
+
+   /**
+    * Display all of the card icons in a window to view.
+    *
+    * @param args command line argument - none expected
+    */
+   public static void main(String[] args)
+   {
+      int k;
+
+      // Prepare the image icon array
+      loadCardIcons();
+
+      // Establish main frame in which program will run
+      JFrame frmMyWindow = new JFrame("Card Room");
+      frmMyWindow.setSize(1150, 650);
+      frmMyWindow.setLocationRelativeTo(null);
+      frmMyWindow.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+
+      // Set up layout which will control placement of buttons, etc.
+      FlowLayout layout = new FlowLayout(FlowLayout.CENTER, 5, 20);
+      frmMyWindow.setLayout(layout);
+
+      // Prepare the image label array
+      JLabel[] labels = new JLabel[NUM_CARD_IMAGES];
+      for (k = 0; k < NUM_CARD_IMAGES; k++)
+      {
+         labels[k] = new JLabel(icon[k]);
+      }
+
+      // Place your 3 controls into frame
+      for (k = 0; k < NUM_CARD_IMAGES; k++)
+      {
+         frmMyWindow.add(labels[k]);
+      }
+
+      // Show everything to the user
+      frmMyWindow.setVisible(true);
+   }
+
+   /**
+    * Create image icons for a deck of cards and store them in our list of
+    * icons.
+    */
+   static void loadCardIcons()
+   {
+      String[] fileNames = getFileNames();
+      // Create icons using the card file name and their location.
+      for (int i = 0; i < fileNames.length && i < NUM_CARD_IMAGES; i++)
+      {
+         icon[i] = new ImageIcon("images/" + fileNames[i]);
+      }
+   }
+
+   /**
+    * Builds the file names ("AC.gif", "2C.gif", "3C.gif", "TC.gif", etc.)
+    * that represent the card types as image icons and stores them in our
+    * icon array.
+    *
+    * @return the file names of the images for a deck of cards
+    */
+   private static String[] getFileNames()
+   {
+      String[] fileNames = new String[NUM_CARD_IMAGES];
+      int cardPosition = 1;
+      // Create the file names to be used later for creating icons.
+      // The card back is a special case and will be added explicitly.
+      fileNames[0] = "BK.gif";
+      for (int i = 0; i < 14; i++) // 14 card values available
+      {
+         String cardValue = turnIntIntoCardValue(i);
+         for (int j = 0; j < 4; j++) // 4 card suits available
+         {
+            String cardSuit = turnIntIntoCardSuit(j);
+            fileNames[cardPosition] = cardValue + cardSuit + ".gif";
+            cardPosition++;
+         }
+      }
+      return fileNames;
+   }
+
+   /**
+    * Get a card value based on an integer, where 0 is the Joker and 1-13
+    * represent Ace to King.
+    *
+    * @param k an number that correlates to a card value
+    *
+    * @return the card value associated with the number
+    */
+   private static String turnIntIntoCardValue(int k)
+   {
+      if (k < 0 || k >= 14)
+      {
+         // Return early if k is not within a valid range.
+         return null;
+      }
+      switch (k)
+      {
+         case 0:
+            return "X"; // Joker
+         case 1:
+            return "A"; // Ace
+         case 10:
+            return "T"; // Ten
+         case 11:
+            return "J"; // Jack
+         case 12:
+            return "Q"; // Queen
+         case 13:
+            return "K"; // King
+         default:
+            return Integer.toString(k);
+      }
+   }
+
+   /**
+    * Get a card suit based on an integer, where 0 represents Clubs, 1
+    * represents Diamonds, 2 represents Hearts, and 3 represents Spades.
+    *
+    * @param j an number associated with a card suit
+    *
+    * @return the car suit associated with the number
+    */
+   private static String turnIntIntoCardSuit(int j)
+   {
+      if (j < 0 || j >= 4)
+      {
+         // Return early if j is not within a valid range.
+         return null;
+      }
+      String[] cardSuits = new String[]{"C", "D", "H", "S"};
+      return cardSuits[j];
+   }
+}
