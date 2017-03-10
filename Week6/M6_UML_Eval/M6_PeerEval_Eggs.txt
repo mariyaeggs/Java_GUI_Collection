@@ -1,0 +1,44 @@
+Mariya Eggensperger
+CST338 Fall 2016
+Software Design
+Prof. J. Cecil
+
+The teams are as follows:
+Team 4           
+-Kenneth Vader
+-Brittany Mazza
+-Mariya Eggensperger
+
+Peer Evaluations
+
+1)Communication -- Them with you?  You with them?
+
+Both Brittany Mazza and Kenneth Vader communicated frequently via email this week; we rarely utilized the github communication forums. As a team, we set up a continuing repository where we commented on pieces of the code within our working program. We did not use TODO as often as we did last week, since this week much of the code had already been prepared last week. 
+
+There was a strong communication between all members of the team to make sure that undone items in the code base were not left incomplete. 
+
+The frequency of communication was daily and multiple times a day. All team members participated in communicating with the team in issues of delay or inability to finish code due to confusion or misunderstanding. This week, we had a small confusion as to the submission requirements; we were not sure if all three phases should be included in one text file?
+
+2) Who decided what each person would do?  Did they do their part?  Did you do your part?
+
+Our team did not have any one person deciding on what the others would do. Every week we have one person, (whomever is most available) launch the project and then the other team mates begin communication and additions to the project. Every new assignment our team initiates begins with a skeletal framework; this week, we did not have as many TODO items as last week because the code for this week was reusable from last week's assignment. 
+
+From the very beginning, our team set up a collateral Github repository and kept an updated,running list of deliverables needed to make the program work and bug-free. We often communicated via email and asked each other for input and/or advice on the best approach to code. 
+
+Many times throughout the code base, comments regarding the best way to approach an algorithm were listed; we even resorted to emailing with infographics on how to best approach the Timer() method. 
+
+Everyone on the team programmed diligently in an effort to help their other teammates fix any missing methods or program bugs. 
+
+3) How much effort did YOU put into the assignment?
+
+This week I was able to put in infrequent amount of work; however, my teammates were aware of this delay. I flew home from Ukraine this week and traveled about 31 hours. I made sure to let my teammates know my delays and also put in more effort toward the end of the programming assignment rather than the beginning. 
+
+Last week, me and Kenneth put in a lot more effort into the Assignment5 project because Brittany was traveling and this week, both Kenneth and Brittany put in more effort due to my travels. This effort however, was much appreciated! 
+
+Upon arrival back home, I put in more effort at the end of the final project and also into the diagramming, debugging and commenting out our code. 
+
+4) How hard was this assignment?
+On a scale of 1-10, this assignment was actually relatively easier than last week because of the reuse in the code; I would rate with a 6.5. 
+
+We were surprised at how difficult a Java Timer actually came out to be! :) 
+
