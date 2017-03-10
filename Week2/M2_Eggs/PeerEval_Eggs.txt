@@ -1,0 +1,28 @@
+Mariya Eggensperger
+CST338 Fall 2016
+Software Design
+Prof. J. Cecil
+
+Peer Evaluations
+
+1)Communication -- Them with you?  You with them?
+
+On a scale of 1-10 I would rate both Brittany Mazza and Kenneth Vader a solid 10! They communicated quite often via email and google hangout and were easy and quite fun to work with. They participated on all aspects of the project and sought to maintain a good team communication dynamic. 
+
+2) Who decided what each person would do?   Did they do their part?  Did you do your part?
+
+Our team did not have any one person deciding on what the others would do. We had a github repository set up from the very beginning of the assignment and kept a running TODO list of deliverables needed to make the program work and bug-free. Everyone on the team programmed diligently in an effort to help their other teammates fix any missing methods or program bugs. On a scale of 1-10, both Kenneth and Brittany were diligent in completing their portions of the program and as did I. It was a team effort and I would say a great team! 
+
+3) How much effort did YOU put into the assignment?
+
+I put in an equally balanced amount of effort into the program along with my teammates. Having a great team dynamic and communication as well as a good running Github repository made it very seamless to contribute and invest effort into the project. Great fun! 
+
+4) How hard was this assignment?
+On a scale of 1-10, this assigment was relatively difficult with a high 7.5 points. The challenge in the program involved the intricacies of each class relating to the other classes in the program, so designing the classes to harmonize with one another, was a reasonably difficult task. Otherwise, the program was fun and learn-filled. 
+
+The teams are as follows:
+Team 4           
+-Kenneth Vader
+-Brittany Mazza
+-Mariya Eggensperger
+

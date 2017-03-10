@@ -1,0 +1,21 @@
+Boolean Mutators (15 min)
+Boolean Mutators
+Boolean Mutators
+
+It is important that mutators (set() methods), give feedback to the calling method, but they should not print anything to the user.  Here is a reminder of what needs to be done. 
+
+Filtering in Mutators. When you get to class methods called mutators, (set() methods), you are required to filter out bad data by testing the parameters for legal, expected values.
+No Error Messages in Mutators. Don't send out error messages to the user (i.e., do not do any input or output) from inside mutator methods.
+Mutators Return Booleans.  Mutators always return either true or false, to indicate to the client whether the set was successful.  The client may, or may not, use this information, but the mutator must supply it.
+Here is an example:
+
+// mutator for int radius in class Circle  ---
+public setRadius( int rad )
+{
+   if (rad < MIN_RADIUS || rad > MAX_RADIUS)
+      return false;  
+   
+   // rad is a good value
+   radius = rad; 
+   return true;
+}
