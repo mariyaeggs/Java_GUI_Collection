@@ -1,0 +1,73 @@
+/*Name: Mariya Eggensperger
+  Compiler: JDK 1.8
+  Program: Static Final Variables
+  Asks the user to enter their 
+  min and max hours spent on 
+  class work and manipulates data.
+ */
+
+import java.util.Scanner; 
+import java.text.DecimalFormat; 
+
+public class Hours // Class manipulates primitive types 
+{
+   public static final int MIN_HOURS = 12; // Minimum hours spent on class per week
+   public static final int MAX_HOURS = 20; // Maximum hours spent on class per week
+
+   public static void main(String[] args)
+   {
+      Scanner user_input = new Scanner(System.in); // Create new Scanner object
+
+      System.out.print("\n********************* PART 2 *********************\n");
+      System.out.print("\nLet's evaluate the" 
+            + " hours recommended for this class each week.\n");
+
+      int range; // Range = Maximum - Minimum
+      range = MAX_HOURS - MIN_HOURS; 
+      System.out.println("\nThe hourly range for this class is " + range + " hours per week.\n");
+
+      System.out.print("Enter the hours you've spent this week to 3 decimal places: \n"); // Request user hour input
+      double weekly_hours = user_input.nextDouble(); 
+      DecimalFormat df = new DecimalFormat("#.0"); // User input formatted to 1 decimal 
+      String hour_string = df.format(weekly_hours); 
+      System.out.println("\nYou entered: " + hour_string + " hours for this week."); 
+      user_input.close(); // Close Scanner to avoid resource leaks
+
+   }
+
+}
+/******************** OUTPUT *********************
+ 
+ 
+-----------------------Run 1----------------------
+
+
+********************* PART 2 *********************
+
+Let's evaluate the hours recommended for this class each week.
+
+The hourly range for this class is 8 hours per week.
+
+Enter the hours you've spent this week to 3 decimal places: 
+2.345678
+
+You entered: 2.3 hours for this week.
+
+
+
+-----------------------Run 2----------------------
+
+
+********************* PART 2 *********************
+
+Let's evaluate the hours recommended for this class each week.
+
+The hourly range for this class is 8 hours per week.
+
+Enter the hours you've spent this week to 3 decimal places: 
+1245
+
+You entered: 1245.0 hours for this week.
+
+
+**************************************************/

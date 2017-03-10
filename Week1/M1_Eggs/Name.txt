@@ -1,0 +1,82 @@
+/*Name: Mariya Eggensperger
+  Class: CST338 FA2016
+  Compiler: JDK 1.8
+  Program: String Manipulator
+  Asks the user to enter their 
+  first name, last name, then 
+  manipulates the string.
+ */
+
+import java.util.Scanner; 
+
+public class Name // Class manipulates name variables 
+{
+
+   public static void main(String[] args)
+   {
+      Scanner user_input = new Scanner(System.in); // Create new Scanner object
+
+      System.out.print("\n********************* PART 1 *********************\n");
+
+      String first_name; // First name String input 
+      System.out.println("\nWelcome. Capitalize the first letter of each name.\n");
+      System.out.print("Enter your first name: \n"); 
+      first_name = user_input.next(); 
+
+      String last_name; // Last name String input 
+      System.out.print("Enter your last name: \n"); 
+      last_name = user_input.next(); 
+
+      String full_name = first_name + " " + last_name; // Combine first and last name with space 
+
+      System.out.println("\nGreetings " + full_name + "!");
+      System.out.println("The length of your full name is: " + full_name.replace(" ", "").length() + ".");
+      System.out.println("Your name in uppercase: " + full_name.toUpperCase() + ".");
+      System.out.println("Your name in lowercase: " + full_name.toLowerCase() + ".");
+      user_input.close(); // Close Scanner to avoid resource leaks
+
+   }
+
+}
+
+/******************** OUTPUT *********************
+
+ 
+-----------------------Run 1----------------------
+
+
+********************* PART 1 *********************
+
+Welcome. Capitalize the first letter of each name.
+
+Enter your first name: 
+Mariya 
+Enter your last name: 
+Eggensperger
+
+Greetings Mariya Eggensperger!
+The length of your full name is: 18.
+Your name in uppercase: MARIYA EGGENSPERGER.
+Your name in lowercase: mariya eggensperger.
+
+
+
+-----------------------Run 2----------------------
+
+
+********************* PART 1 *********************
+
+Welcome. Capitalize the first letter of each name.
+
+Enter your first name: 
+Scott 
+Enter your last name: 
+Eggensperger 
+
+Greetings Scott Eggensperger!
+The length of your full name is: 17.
+Your name in uppercase: SCOTT EGGENSPERGER.
+Your name in lowercase: scott eggensperger.
+
+
+**************************************************/
